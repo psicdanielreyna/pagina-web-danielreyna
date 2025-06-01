@@ -1,21 +1,93 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Daniel Reyna - Psicólogo</title>
-  <link rel="stylesheet" href="estilos.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daniel Reyna – Psicólogo</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <style>
+    .boton-flotante {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #000;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+    .boton-flotante:hover {
+      background-color: #444;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const boton = document.querySelector(".boton-scroll");
+      const contacto = document.getElementById("contacto");
+      if (boton && contacto) {
+        boton.addEventListener("click", function (e) {
+          e.preventDefault();
+          contacto.scrollIntoView({ behavior: "smooth" });
+        });
+      }
+      const botonFlotante = document.querySelector(".boton-flotante");
+      if (botonFlotante && contacto) {
+        botonFlotante.addEventListener("click", function (e) {
+          e.preventDefault();
+          contacto.scrollIntoView({ behavior: "smooth" });
+        });
+      }
+    });
+  </script>
 </head>
 <body>
   <section class="inicio">
     <div class="foto">
-      <img src="daniel.png" alt="Daniel Reyna">
+      <img src="daniel.png" alt="Daniel Reyna Psicólogo" />
     </div>
     <div class="descripcion">
       <h1>Daniel Reyna</h1>
       <p>Licenciado en Psicología con enfoque Clínico Cognitivo Conductual</p>
-      <a href="https://wa.me/528117649180" target="_blank" class="boton">Enviar mensaje</a>
+      <a href="#contacto" class="boton boton-scroll">Enviar mensaje</a>
     </div>
   </section>
+
+  <section class="seccion" id="sobremi">
+    <h2>Sobre mí</h2>
+    <p>Psicólogo egresado de la Facultad de Psicología de la UANL. Especializado en terapia breve cognitivo conductual y apasionado por acompañar procesos de sanación emocional. Trabajo en línea y de forma presencial en Monterrey.</p>
+  </section>
+
+  <section class="seccion" id="servicios">
+    <h2>Servicios</h2>
+    <p>Ofrezco terapia en modalidad presencial (en Monterrey) y en línea para el resto del mundo. Atención especializada en duelo, ansiedad, crisis emocionales y depresión.</p>
+  </section>
+
+  <section class="seccion testimonios" id="testimonios">
+    <h2>Testimonios</h2>
+    <p>"Después de varias sesiones con Daniel, por fin pude empezar a dormir tranquilo."</p>
+    <p>"Su enfoque práctico y cercano me ayudó a salir de una etapa muy difícil."</p>
+  </section>
+
+  <section class="seccion blog-newsletter" id="blog">
+    <h2>Blog y Newsletter</h2>
+    <p>Suscríbete para recibir reflexiones, herramientas emocionales y nuevos artículos cada semana. Muy pronto podrás leer entradas directamente aquí.</p>
+  </section>
+
+  <section class="seccion tienda" id="tienda">
+    <h2>Tienda</h2>
+    <p>Explora nuestros eBooks descargables sobre ansiedad, autoestima, duelo, hábitos y más. PsicoToolKit a un clic de distancia.</p>
+    <p><a href="https://psicotoolkit.com" target="_blank">Ir a la tienda</a></p>
+  </section>
+
+  <section class="seccion" id="contacto">
+    <h2>Contacto</h2>
+    <p>Correo: <a href="mailto:psic.danielreyna@gmail.com">psic.danielreyna@gmail.com</a></p>
+    <p>WhatsApp: <a href="https://wa.me/528117649180" target="_blank">811 764 9180</a></p>
+  </section>
+
+  <a href="#contacto" class="boton-flotante">Agendar sesión</a>
 </body>
 </html>
