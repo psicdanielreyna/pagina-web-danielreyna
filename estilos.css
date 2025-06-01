@@ -1,0 +1,58 @@
+/* estilos.css */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+}
+
+.inicio {
+  display: flex;
+  height: 100vh;
+  background-image: url('fondo-gris.png');
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.foto img {
+  height: 90vh;
+  max-height: 700px;
+  width: auto;
+}
+
+.descripcion {
+  max-width: 600px;
+  color: #000000;
+}
+
+.descripcion h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.descripcion p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+}
+
+.boton {
+  padding: 15px 30px;
+  border: 2px solid black;
+  background: transparent;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.boton:hover {
+  background: black;
+  color: white;
+}
