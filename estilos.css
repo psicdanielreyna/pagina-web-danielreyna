@@ -8,9 +8,13 @@ body {
 }
 
 section {
-  padding: 100px 20px;
+  height: 100vh;
+  padding: 60px 20px;
   max-width: 1200px;
   margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Sección Hero */
@@ -21,7 +25,6 @@ section {
   background-image: url("testimonios.png");
   background-size: cover;
   background-position: center;
-  min-height: 100vh;
   text-align: left;
   color: #000;
 }
@@ -31,23 +34,28 @@ section {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 40px;
 }
 
 .hero img {
-  width: 380px;
+  width: 300px;
   height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.hero-text {
+  max-width: 600px;
 }
 
 .hero-text h1 {
-  font-size: 48px;
+  font-size: 36px;
   margin-bottom: 10px;
   font-weight: 700;
 }
 
 .hero-text p {
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 30px;
   color: #333;
 }
