@@ -6,23 +6,11 @@
   <title>Daniel Reyna – Psicólogo</title>
   <link rel="stylesheet" href="estilos.css" />
   <style>
-    :root {
-      --color-primario: #5e4b8b;
-      --color-acento: #d4b2ff;
-      --color-claro: #f8f4fb;
-      --color-oscuro: #1e1e1e;
-    }
-
     body {
       scroll-behavior: smooth;
-      font-family: 'DM Sans', sans-serif;
-      background-color: var(--color-claro);
-      color: var(--color-oscuro);
-      margin: 0;
-      padding: 0;
     }
     nav {
-      background-color: var(--color-oscuro);
+      background-color: #000;
       padding: 15px;
       position: fixed;
       top: 0;
@@ -42,49 +30,49 @@
       text-decoration: underline;
     }
     .inicio {
-      padding-top: 100px;
+      padding-top: 80px;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-      padding: 60px 20px;
-      background: url('inicio.png');
+      background: url('inicio.png') no-repeat center center;
       background-size: cover;
-      background-position: center;
+      padding: 80px 20px;
     }
     .foto img {
-      max-width: 300px;
-      border-radius: 8px;
+      width: 300px;
+      max-width: 100%;
+      height: auto;
     }
     .descripcion {
       max-width: 500px;
       margin-left: 40px;
     }
     .descripcion h1 {
-      font-size: 3rem;
-      margin: 0;
+      font-size: 3em;
+      margin-bottom: 0.3em;
     }
-    .descripcion p {
-      font-size: 1.2rem;
-    }
-    .boton {
+    .boton-scroll {
       display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      background-color: var(--color-primario);
-      color: white;
-      text-decoration: none;
-      border-radius: 30px;
+      margin-top: 1.5em;
+      padding: 12px 20px;
+      border: 2px solid #4b0082;
+      background-color: transparent;
+      color: #4b0082;
       font-weight: bold;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: all 0.3s ease;
     }
-    .boton:hover {
-      background-color: #4a3a6e;
+    .boton-scroll:hover {
+      background-color: #4b0082;
+      color: white;
     }
     .boton-flotante {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background-color: var(--color-primario);
+      background-color: #4b0082;
       color: white;
       padding: 12px 20px;
       border-radius: 30px;
@@ -94,24 +82,7 @@
       z-index: 1000;
     }
     .boton-flotante:hover {
-      background-color: #4a3a6e;
-    }
-    .seccion {
-      padding: 60px 20px;
-      max-width: 800px;
-      margin: auto;
-    }
-    .seccion:nth-child(even) {
-      background-color: white;
-    }
-    .seccion h2 {
-      color: var(--color-primario);
-    }
-    footer {
-      text-align: center;
-      padding: 2em;
-      font-size: 0.9em;
-      color: #666;
+      background-color: #32125a;
     }
   </style>
   <script>
@@ -155,7 +126,7 @@
     <div class="descripcion">
       <h1>Daniel Reyna</h1>
       <p>Licenciado en Psicología con enfoque Clínico Cognitivo Conductual</p>
-      <a href="#contacto" class="boton boton-scroll">Enviar mensaje</a>
+      <a href="#contacto" class="boton-scroll">Enviar mensaje</a>
     </div>
   </section>
 
