@@ -1,113 +1,90 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daniel Reyna – Psicólogo</title>
-  <link rel="stylesheet" href="estilos.css" />
-  <style>
-    body {
-      scroll-behavior: smooth;
-    }
-    nav {
-      background-color: #000;
-      padding: 15px;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      display: flex;
-      justify-content: center;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-  </style>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const enlaces = document.querySelectorAll("nav a");
-      enlaces.forEach((enlace) => {
-        enlace.addEventListener("click", function (e) {
-          e.preventDefault();
-          const destino = document.querySelector(this.getAttribute("href"));
-          if (destino) {
-            destino.scrollIntoView({ behavior: "smooth" });
-          }
-        });
-      });
+/* Reset básico */
+body, html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: 'Segoe UI', sans-serif;
+}
 
-      const botonFlotante = document.querySelector(".boton-flotante");
-      const contacto = document.getElementById("contacto");
-      if (botonFlotante && contacto) {
-        botonFlotante.addEventListener("click", function (e) {
-          e.preventDefault();
-          contacto.scrollIntoView({ behavior: "smooth" });
-        });
-      }
-    });
-  </script>
-</head>
-<body>
-  <nav>
-    <a href="#sobremi">Sobre mí</a>
-    <a href="#servicios">Servicios</a>
-    <a href="#testimonios">Testimonios</a>
-    <a href="#blog">Blog</a>
-    <a href="#tienda">Tienda</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
+/* Navegación */
+nav {
+  background-color: #000;
+  color: white;
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  z-index: 1000;
+}
 
-  <section class="inicio">
-    <div class="foto">
-      <img src="daniel.png" alt="Daniel Reyna Psicólogo" />
-    </div>
-    <div class="descripcion">
-      <h1>Daniel Reyna</h1>
-      <p>Licenciado en Psicología con enfoque Clínico Cognitivo Conductual</p>
-      <a href="#contacto" class="boton-scroll">Enviar mensaje</a>
-    </div>
-  </section>
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-  <section class="seccion" id="sobremi">
-    <h2>Sobre mí</h2>
-    <p>Psicólogo egresado de la Facultad de Psicología de la UANL. Especializado en terapia breve cognitivo conductual y apasionado por acompañar procesos de sanación emocional. Trabajo en línea y de forma presencial en Monterrey.</p>
-  </section>
+nav a:hover {
+  text-decoration: underline;
+}
 
-  <section class="seccion" id="servicios">
-    <h2>Servicios</h2>
-    <p>Ofrezco terapia en modalidad presencial (en Monterrey) y en línea para el resto del mundo. Atención especializada en duelo, ansiedad, crisis emocionales y depresión.</p>
-  </section>
+/* Sección HERO */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 100vh;
+  background: url('testimonios.png') center/cover no-repeat, #ccc;
+  padding-top: 80px;
+}
 
-  <section class="seccion testimonios" id="testimonios">
-    <h2>Testimonios</h2>
-    <p>"Después de varias sesiones con Daniel, por fin pude empezar a dormir tranquilo."</p>
-    <p>"Su enfoque práctico y cercano me ayudó a salir de una etapa muy difícil."</p>
-  </section>
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
 
-  <section class="seccion blog-newsletter" id="blog">
-    <h2>Blog y Newsletter</h2>
-    <p>Suscríbete para recibir reflexiones, herramientas emocionales y nuevos artículos cada semana. Muy pronto podrás leer entradas directamente aquí.</p>
-  </section>
+.hero-content img {
+  width: 280px;
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
 
-  <section class="seccion tienda" id="tienda">
-    <h2>Tienda</h2>
-    <p>Explora nuestros eBooks descargables sobre ansiedad, autoestima, duelo, hábitos y más. PsicoToolKit a un clic de distancia.</p>
-    <p><a href="https://psicotoolkit.com" target="_blank">Ir a la tienda</a></p>
-  </section>
+.hero-text {
+  text-align: left;
+  max-width: 500px;
+}
 
-  <section class="seccion" id="contacto">
-    <h2>Contacto</h2>
-    <p>Correo: <a href="mailto:psic.danielreyna@gmail.com">psic.danielreyna@gmail.com</a></p>
-    <p>WhatsApp: <a href="https://wa.me/528117649180" target="_blank">811 764 9180</a></p>
-  </section>
+.hero-text h1 {
+  font-size: 3rem;
+  margin: 0 0 1rem 0;
+}
 
-  <a href="#contacto" class="boton-flotante">Agendar sesión</a>
-</body>
-</html>
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero-text a {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid black;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 0.4rem;
+  transition: background 0.3s ease;
+}
+
+.hero-text a:hover {
+  background-color: black;
+  color: white;
+}
