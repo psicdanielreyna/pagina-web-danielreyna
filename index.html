@@ -1,90 +1,31 @@
-/* Reset básico */
-body, html {
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-  font-family: 'Segoe UI', sans-serif;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daniel Reyna | Psicólogo</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <nav>
+    <a href="#sobremi">Sobre mí</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#testimonios">Testimonios</a>
+    <a href="#blog">Blog</a>
+    <a href="#tienda">Tienda</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
 
-/* Navegación */
-nav {
-  background-color: #000;
-  color: white;
-  padding: 1rem 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  z-index: 1000;
-}
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <img src="daniel.png" alt="Daniel Reyna">
+      <div class="hero-text">
+        <h1>Daniel Reyna</h1>
+        <p>Licenciado en Psicología con enfoque Clínico Cognitivo Conductual</p>
+        <a href="https://wa.me/528117649180" target="_blank">Enviar mensaje</a>
+      </div>
+    </div>
+  </section>
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* Sección HERO */
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  height: 100vh;
-  background: url('testimonios.png') center/cover no-repeat, #ccc;
-  padding-top: 80px;
-}
-
-.hero-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 3rem;
-}
-
-.hero-content img {
-  width: 280px;
-  height: auto;
-  max-height: 80vh;
-  object-fit: contain;
-  border-radius: 8px;
-}
-
-.hero-text {
-  text-align: left;
-  max-width: 500px;
-}
-
-.hero-text h1 {
-  font-size: 3rem;
-  margin: 0 0 1rem 0;
-}
-
-.hero-text p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-}
-
-.hero-text a {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border: 2px solid black;
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 0.4rem;
-  transition: background 0.3s ease;
-}
-
-.hero-text a:hover {
-  background-color: black;
-  color: white;
-}
+</body>
+</html>
