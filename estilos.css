@@ -18,7 +18,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("Inicio.png");
+  background-image: url("testimonios.png");
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -36,7 +36,7 @@ section {
 }
 
 .hero img {
-  width: 280px; /* tamaño reducido para evitar que se vea demasiado grande */
+  width: 380px;
   height: auto;
 }
 
@@ -61,6 +61,7 @@ section {
   font-weight: bold;
   border-radius: 5px;
   transition: all 0.3s ease;
+  background: none;
 }
 
 .hero-text a:hover {
