@@ -6,11 +6,85 @@
   <title>Daniel Reyna – Psicólogo</title>
   <link rel="stylesheet" href="estilos.css" />
   <style>
+    :root {
+      --color-primario: #5e4b8b;
+      --color-acento: #d4b2ff;
+      --color-claro: #f8f4fb;
+      --color-oscuro: #1e1e1e;
+    }
+
+    body {
+      scroll-behavior: smooth;
+      font-family: 'DM Sans', sans-serif;
+      background-color: var(--color-claro);
+      color: var(--color-oscuro);
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      background-color: var(--color-oscuro);
+      padding: 15px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .inicio {
+      padding-top: 100px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px;
+      background: url('inicio.png');
+      background-size: cover;
+      background-position: center;
+    }
+    .foto img {
+      max-width: 300px;
+      border-radius: 8px;
+    }
+    .descripcion {
+      max-width: 500px;
+      margin-left: 40px;
+    }
+    .descripcion h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+    .descripcion p {
+      font-size: 1.2rem;
+    }
+    .boton {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: var(--color-primario);
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+    }
+    .boton:hover {
+      background-color: #4a3a6e;
+    }
     .boton-flotante {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background-color: #000;
+      background-color: var(--color-primario);
       color: white;
       padding: 12px 20px;
       border-radius: 30px;
@@ -20,20 +94,41 @@
       z-index: 1000;
     }
     .boton-flotante:hover {
-      background-color: #444;
+      background-color: #4a3a6e;
+    }
+    .seccion {
+      padding: 60px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .seccion:nth-child(even) {
+      background-color: white;
+    }
+    .seccion h2 {
+      color: var(--color-primario);
+    }
+    footer {
+      text-align: center;
+      padding: 2em;
+      font-size: 0.9em;
+      color: #666;
     }
   </style>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const boton = document.querySelector(".boton-scroll");
-      const contacto = document.getElementById("contacto");
-      if (boton && contacto) {
-        boton.addEventListener("click", function (e) {
+      const enlaces = document.querySelectorAll("nav a");
+      enlaces.forEach((enlace) => {
+        enlace.addEventListener("click", function (e) {
           e.preventDefault();
-          contacto.scrollIntoView({ behavior: "smooth" });
+          const destino = document.querySelector(this.getAttribute("href"));
+          if (destino) {
+            destino.scrollIntoView({ behavior: "smooth" });
+          }
         });
-      }
+      });
+
       const botonFlotante = document.querySelector(".boton-flotante");
+      const contacto = document.getElementById("contacto");
       if (botonFlotante && contacto) {
         botonFlotante.addEventListener("click", function (e) {
           e.preventDefault();
@@ -44,6 +139,15 @@
   </script>
 </head>
 <body>
+  <nav>
+    <a href="#sobremi">Sobre mí</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#testimonios">Testimonios</a>
+    <a href="#blog">Blog</a>
+    <a href="#tienda">Tienda</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
   <section class="inicio">
     <div class="foto">
       <img src="daniel.png" alt="Daniel Reyna Psicólogo" />
