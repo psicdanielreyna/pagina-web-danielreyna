@@ -98,13 +98,13 @@ nav a:hover {
 /* Sobre mí */
 .sobremi {
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 40px;
   background-image: url("Sobre%20mi.png");
   background-size: cover;
   background-position: center;
+  padding: 100px 20px;
 }
 
 .sobremi img {
