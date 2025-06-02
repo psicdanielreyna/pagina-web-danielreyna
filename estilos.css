@@ -103,12 +103,12 @@ nav a:hover {
   gap: 40px;
   background-image: url("Sobre%20mi.png");
   background-size: cover;
-  background-position: center;
+  background-position: left;
   padding: 100px 20px;
 }
 
 .sobremi img {
-  width: 200px;
+  width: 150px;
   height: auto;
   border-radius: 8px;
 }
