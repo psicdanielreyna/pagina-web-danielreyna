@@ -95,22 +95,26 @@ nav a:hover {
   border-bottom: 2px solid #000;
 }
 
-/* Sobre mí */
-.sobremi {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 50px;
+#sobre-mi {
   background-image: url("Sobre%20mi.png");
   background-size: cover;
   background-position: center;
 }
 
-.sobremi img {
+#sobre-mi .hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+#sobre-mi img {
   width: 150px;
   height: auto;
   border-radius: 8px;
 }
+
 
 .sobremi-text {
   max-width: 500px;
