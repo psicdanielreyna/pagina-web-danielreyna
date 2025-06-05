@@ -22,7 +22,8 @@ header {
 
 .logo img {
   height: 60px;
-  cursor: pointer;
+  max-width: 250px;
+  object-fit: contain;
 }
 
 nav ul {
@@ -88,10 +89,10 @@ nav a:hover {
 }
 
 .hero-imagen img {
-  max-width: 300px;
+  max-width: 380px;
   width: 100%;
   height: auto;
   object-fit: contain;
-  margin-left: 6rem;
-  padding-bottom: 0;
+  margin-right: 0;
+  align-self: flex-end;
 }
