@@ -20,14 +20,9 @@ header {
   z-index: 1000;
 }
 
-.logo {
-  font-weight: bold;
-  font-size: 1.2rem;
+.logo img {
+  height: 50px;
   cursor: pointer;
-}
-
-.logo:hover {
-  text-decoration: underline;
 }
 
 nav ul {
@@ -93,7 +88,7 @@ nav a:hover {
 }
 
 .hero-imagen img {
-  max-width: 340px;
+  max-width: 320px;
   width: 100%;
   height: auto;
   object-fit: contain;
