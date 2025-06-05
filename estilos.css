@@ -7,22 +7,23 @@ body, html {
 }
 
 /* Navegación */
-header {
+nav {
+  background-color: white;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 999;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.logo img {
-  height: 50px;
-  max-width: 200px;
-  object-fit: contain;
+nav img.logo {
+  height: 45px;
+  width: auto;
 }
 
 nav ul {
@@ -33,25 +34,25 @@ nav ul {
   padding: 0;
 }
 
-nav a {
+nav ul li a {
   color: black;
   text-decoration: none;
   font-weight: bold;
 }
 
-nav a:hover {
+nav ul li a:hover {
   text-decoration: underline;
 }
 
-/* HERO */
+/* Sección HERO */
 .hero {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
-  height: 100vh;
+  min-height: 100vh;
   background: url('testimonios.png') center/cover no-repeat;
-  padding: 80px 2rem;
+  padding: 120px 2rem 60px;
 }
 
 .hero-content {
@@ -59,90 +60,103 @@ nav a:hover {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 3rem;
+  max-width: 1200px;
   width: 100%;
-  max-width: 1300px;
-}
-
-.hero-image {
-  width: 280px;
-  height: auto;
-  object-fit: contain;
-  border-radius: 8px;
-  align-self: flex-end;
+  margin: 0 auto;
 }
 
 .hero-text {
-  max-width: 500px;
+  flex: 1 1 400px;
   text-align: left;
 }
 
 .hero-text h1 {
   font-size: 3rem;
   margin: 0 0 1rem 0;
-  color: #222;
 }
 
 .hero-text p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  color: #444;
 }
 
-.btn-agendar {
+.hero-text a.btn-agendar {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background: #d6c7bd;
+  background-color: #d6c7bd;
   color: white;
-  text-decoration: none;
   font-weight: bold;
-  border-radius: 0.4rem;
-  transition: background 0.3s ease;
   border: none;
+  border-radius: 0.4rem;
+  text-decoration: none;
+  transition: background 0.3s ease;
 }
 
-.btn-agendar:hover {
-  background-color: black;
-  color: white;
+.hero-text a.btn-agendar:hover {
+  background-color: #bba89b;
 }
 
-/* TERAPIA */
+.hero img {
+  max-height: 500px;
+  height: auto;
+  object-fit: contain;
+  flex: 1 1 300px;
+  margin-top: 2rem;
+}
+
+/* Sección Terapia */
 .terapia {
   background: url('Sobre%20mi.png') center/cover no-repeat;
   padding: 4rem 2rem;
 }
 
 .contenedor-terapia {
-  max-width: 900px;
-  margin: 0 auto;
-  background-color: rgba(255,255,255,0.8);
-  padding: 2rem;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 3rem 2rem;
+  max-width: 1000px;
+  margin: 2rem auto;
   border-radius: 10px;
+  text-align: center;
 }
 
 .contenedor-terapia h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #111;
 }
 
 .contenedor-terapia p {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
 }
 
-/* BLOG */
+.contenedor-terapia a.btn-agendar {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #d6c7bd;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.4rem;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.contenedor-terapia a.btn-agendar:hover {
+  background-color: #bba89b;
+}
+
+/* Sección Blog */
 .blog {
   background: url('BLOG.png') center/cover no-repeat;
   padding: 4rem 2rem;
 }
 
 .contenedor-blog {
-  max-width: 900px;
-  margin: 0 auto;
-  background-color: rgba(255,255,255,0.8);
-  padding: 2rem;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 3rem 2rem;
+  max-width: 1000px;
+  margin: 2rem auto;
   border-radius: 10px;
   text-align: center;
 }
@@ -153,7 +167,6 @@ nav a:hover {
 }
 
 .contenedor-blog p {
-  font-size: 1rem;
-  color: #444;
-  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
 }
