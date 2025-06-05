@@ -21,7 +21,7 @@ header {
 }
 
 .logo img {
-  height: 50px;
+  height: 60px;
   cursor: pointer;
 }
 
@@ -50,7 +50,7 @@ nav a:hover {
   align-items: center;
   padding: 4rem 8%;
   background: url('testimonios.png') center/cover no-repeat;
-  min-height: 90vh;
+  min-height: 100vh;
   box-sizing: border-box;
 }
 
@@ -88,10 +88,10 @@ nav a:hover {
 }
 
 .hero-imagen img {
-  max-width: 320px;
+  max-width: 300px;
   width: 100%;
   height: auto;
   object-fit: contain;
-  padding-bottom: 3rem;
-  margin-left: 4rem;
+  margin-left: 6rem;
+  padding-bottom: 0;
 }
