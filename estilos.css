@@ -96,3 +96,33 @@ nav a:hover {
   margin-right: 0;
   align-self: flex-end;
 }
+/* Estilos para la sección de terapia */
+.terapia {
+  background-image: url('Sobre mi.png');
+  background-size: cover;
+  background-position: center;
+  padding: 6rem 2rem;
+  color: #2e2e2e;
+  text-align: center;
+}
+
+.contenedor-terapia {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor-terapia h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+}
+
+.contenedor-terapia p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
