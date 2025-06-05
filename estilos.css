@@ -1,4 +1,4 @@
-/* RESET GENERAL */
+/* Reset básico */
 body, html {
   margin: 0;
   padding: 0;
@@ -6,24 +6,22 @@ body, html {
   font-family: 'Segoe UI', sans-serif;
 }
 
-/* ENCABEZADO Y NAVEGACIÓN */
-nav {
-  background-color: white;
-  color: #000;
-  padding: 1rem 2rem;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
+/* Navegación */
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 1000;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
-nav img.logo {
-  height: 60px;
+.logo img {
+  height: 50px;
+  max-width: 200px;
   object-fit: contain;
 }
 
@@ -31,127 +29,131 @@ nav ul {
   list-style: none;
   display: flex;
   gap: 2rem;
+  margin: 0;
+  padding: 0;
 }
 
 nav a {
-  color: #000;
+  color: black;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s ease;
 }
 
 nav a:hover {
   text-decoration: underline;
 }
 
-/* INICIO */
-section#inicio {
-  background-image: url('testimonios.png');
-  background-size: cover;
-  background-position: center;
-  padding: 6rem 2rem 4rem;
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100vh;
+  background: url('testimonios.png') center/cover no-repeat;
+  padding: 80px 2rem;
+}
+
+.hero-content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  min-height: 100vh;
-  box-sizing: border-box;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1300px;
 }
 
-.hero-texto {
-  max-width: 50%;
+.hero-image {
+  width: 280px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  align-self: flex-end;
 }
 
-.hero-texto h1 {
-  font-size: 2.8rem;
-  color: #1a1a1a;
+.hero-text {
+  max-width: 500px;
+  text-align: left;
 }
 
-.hero-texto p {
-  font-size: 1.1rem;
-  margin-top: 1rem;
-  color: #333;
+.hero-text h1 {
+  font-size: 3rem;
+  margin: 0 0 1rem 0;
+  color: #222;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #444;
 }
 
 .btn-agendar {
-  margin-top: 2rem;
-  background-color: #d6c7bd;
-  color: white;
-  font-weight: bold;
-  padding: 0.8rem 1.5rem;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
   display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #d6c7bd;
+  color: white;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  font-weight: bold;
+  border-radius: 0.4rem;
+  transition: background 0.3s ease;
+  border: none;
 }
 
 .btn-agendar:hover {
-  background-color: #c2b2a4;
+  background-color: black;
+  color: white;
 }
 
-.hero-imagen img {
-  max-height: 550px;
-  width: auto;
-  display: block;
-  margin-right: 2rem;
-}
-
-/* SECCIÓN TERAPIA */
-section.terapia {
-  background-image: url('Sobre mi.png');
-  background-size: cover;
-  background-position: center;
+/* TERAPIA */
+.terapia {
+  background: url('Sobre%20mi.png') center/cover no-repeat;
   padding: 4rem 2rem;
-  text-align: center;
 }
 
 .contenedor-terapia {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
-  background-color: rgba(255,255,255,0.85);
+  background-color: rgba(255,255,255,0.8);
   padding: 2rem;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 .contenedor-terapia h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  color: #111;
 }
 
 .contenedor-terapia p {
   font-size: 1rem;
   margin-bottom: 1rem;
-  line-height: 1.6;
   color: #333;
 }
 
-/* SECCIÓN BLOG */
-section.blog {
+/* BLOG */
+.blog {
+  background: url('BLOG.png') center/cover no-repeat;
   padding: 4rem 2rem;
-  background-image: url('BLOG.png');
-  background-size: cover;
-  background-position: center;
 }
 
 .contenedor-blog {
   max-width: 900px;
   margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255,255,255,0.8);
   padding: 2rem;
-  border-radius: 8px;
+  border-radius: 10px;
+  text-align: center;
 }
 
 .contenedor-blog h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  text-align: center;
 }
 
 .contenedor-blog p {
-  font-size: 1.1rem;
-  color: #333;
-  line-height: 1.6;
-  text-align: center;
+  font-size: 1rem;
+  color: #444;
   margin-bottom: 1rem;
 }
