@@ -6,25 +6,21 @@
 }
 
 body {
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  color: #1a1a1a;
-  background-color: #fff;
-  scroll-behavior: smooth;
+  color: #222;
 }
 
 header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding: 20px 40px;
-  position: fixed;
+  position: sticky;
   top: 0;
-  width: 100%;
   background-color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  transition: padding 0.3s ease;
   z-index: 1000;
+  transition: padding 0.3s ease;
 }
 
 header.shrink {
@@ -32,12 +28,7 @@ header.shrink {
 }
 
 .logo {
-  height: 50px;
-  transition: height 0.3s ease;
-}
-
-header.shrink .logo {
-  height: 35px;
+  height: 40px;
 }
 
 nav ul {
@@ -50,144 +41,123 @@ nav ul li a {
   text-decoration: none;
   color: #000;
   font-weight: bold;
-  transition: color 0.3s;
-}
-
-nav ul li a:hover {
-  color: #9c6644;
 }
 
 .hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 160px 60px 60px;
   background-image: url('testimonios.png');
   background-size: cover;
   background-position: center;
+  padding: 100px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
 .hero-text {
+  flex: 1 1 500px;
   max-width: 600px;
 }
 
 .hero-text h1 {
-  font-size: 42px;
+  font-size: 2.8rem;
   margin-bottom: 20px;
   font-weight: bold;
+  color: #1a1a1a;
 }
 
 .hero-text p {
+  font-size: 1.1rem;
   margin-bottom: 20px;
-  font-size: 18px;
-}
-
-.btn-agendar {
-  background-color: #dccac0;
-  color: #fff;
-  padding: 12px 24px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 6px;
-  transition: background-color 0.3s;
-}
-
-.btn-agendar:hover {
-  background-color: #b49f91;
+  color: #444;
 }
 
 .hero-img {
-  max-width: 350px;
-  height: auto;
+  flex: 1 1 300px;
+  max-width: 400px;
+}
+
+.btn-agendar {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #d6c2b3;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.btn-agendar:hover {
+  background-color: #bda490;
 }
 
 .terapia {
-  padding: 80px 60px;
   background-image: url('Sobre mi.png');
   background-size: cover;
   background-position: center;
+  padding: 100px 40px;
 }
 
 .contenedor-terapia {
-  background: rgba(255, 255, 255, 0.9);
-  padding: 40px;
-  max-width: 900px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 50px;
+  max-width: 960px;
   margin: 0 auto;
   border-radius: 12px;
   text-align: center;
-}
-
-.contenedor-terapia h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
 }
 
 .blog {
-  padding: 80px 60px;
   background-image: url('BLOG.png');
   background-size: cover;
   background-position: center;
+  padding: 100px 40px;
 }
 
 .contenedor-blog {
-  background: rgba(255, 255, 255, 0.95);
-  padding: 40px;
-  max-width: 900px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 50px;
+  max-width: 960px;
   margin: 0 auto;
   border-radius: 12px;
   text-align: center;
-}
-
-.contenedor-blog h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
 }
 
 .contacto {
-  padding: 80px 60px;
   background-image: url('contacto.png');
   background-size: cover;
   background-position: center;
+  padding: 100px 40px;
 }
 
 .contenedor-contacto {
-  background: rgba(255, 255, 255, 0.95);
-  padding: 40px;
-  max-width: 900px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 50px;
+  max-width: 960px;
   margin: 0 auto;
   border-radius: 12px;
   text-align: center;
-}
-
-.contenedor-contacto h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
 }
 
 .contacto-lista {
   list-style: none;
   padding: 0;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
 }
 
 .contacto-lista li {
   display: flex;
   align-items: center;
+  gap: 15px;
   justify-content: center;
-  gap: 10px;
-  margin: 10px 0;
-  font-size: 18px;
 }
 
-.contacto-lista img {
+.contacto-lista li img {
   width: 24px;
   height: 24px;
-}
-
-.contacto-lista a {
-  color: #333;
-  text-decoration: none;
-}
-
-.contacto-lista a:hover {
-  text-decoration: underline;
 }
