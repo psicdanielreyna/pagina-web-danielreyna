@@ -1,47 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Daniel Reyna | Psicólogo</title>
-  <link rel="stylesheet" href="estilos.css" />
+  <link rel="stylesheet" href="estilos.css">
+  <script defer src="script.js"></script>
 </head>
-
 <body>
-  <header id="navbar">
-    <img src="Logo.png" alt="Daniel Reyna - Psicólogo" class="logo" />
-    <nav>
+  <header>
+    <div class="menu-icon" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="logo-container">
+      <a href="#inicio"><img src="Logo.png" alt="Daniel Reyna Logo" class="logo"></a>
+    </div>
+    <nav class="menu" id="menu">
       <ul>
-        <li><a href="#inicio">Inicio</a></li>
         <li><a href="#terapia">Terapia</a></li>
         <li><a href="#blog">Blog</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
+      <div class="social-icons">
+        <a href="https://instagram.com/psic.danielreyna" target="_blank"><img src="Instagram navegacion.svg" alt="Instagram"></a>
+        <a href="https://tiktok.com/@psictokdanreyna" target="_blank"><img src="Tiktok navegacion.svg" alt="TikTok"></a>
+        <a href="https://twitter.com/psic.danielreyna" target="_blank"><img src="twitter.svg" alt="X"></a>
+        <a href="https://youtube.com" target="_blank"><img src="Youtube navegacion.svg" alt="YouTube"></a>
+      </div>
     </nav>
   </header>
 
-  <section id="inicio" class="hero">
+  <section class="hero" id="inicio">
     <div class="hero-text">
       <h1>Terapia compasiva y práctica desde un enfoque cognitivo conductual.</h1>
       <p>Disponible en línea o presencial en Monterrey, N.L.</p>
-      <a class="btn-agendar" href="https://wa.me/528117649180" target="_blank">Agenda una sesión</a>
+      <a href="https://wa.me/528117649180" class="btn-agendar" target="_blank">Agenda una sesión</a>
     </div>
     <div class="hero-img">
-      <img src="daniel.png" alt="Daniel Reyna" style="width: 100%; height: auto" />
+      <img src="IMG_0265.jpeg" alt="Daniel Reyna Foto" style="width: 100%; height: auto;">
     </div>
   </section>
 
-  <section id="terapia" class="terapia">
+  <section class="terapia" id="terapia">
     <div class="contenedor-terapia">
       <h2>Terapia psicológica centrada en ti</h2>
       <p>Mi enfoque está basado en la terapia cognitivo conductual (TCC), donde trabajamos de manera práctica, compasiva y enfocada en resultados. Te acompaño tanto en línea como de forma presencial en Monterrey, adaptándome a tu ritmo, tus necesidades y tus objetivos.</p>
       <p>Este espacio es para ti si estás atravesando ansiedad, relaciones difíciles, baja autoestima o simplemente buscas conocerte más y sanar. En cada sesión encontrarás escucha activa, herramientas útiles y claridad para avanzar.</p>
-      <a class="btn-agendar" href="https://wa.me/528117649180" target="_blank">Agendar cita</a>
+      <a href="https://wa.me/528117649180" class="btn-agendar" target="_blank">Agendar cita</a>
     </div>
   </section>
 
-  <section id="blog" class="blog">
+  <section class="blog" id="blog">
     <div class="contenedor-blog">
       <h2>Blog</h2>
       <p>Muy pronto aquí podrás leer artículos escritos por mí, enfocados en temas de salud mental, relaciones, emociones y herramientas prácticas para tu bienestar.</p>
@@ -49,31 +60,18 @@
     </div>
   </section>
 
-  <section id="contacto" class="contacto">
+  <section class="contacto" id="contacto">
     <div class="contenedor-contacto">
       <h2>Contacto</h2>
       <ul class="contacto-lista">
         <li><img src="ubicacion.svg" alt="Ubicación"> Av Simón Bolivar 1333 Col Mitras centro Monterrey Nuevo León</li>
-        <li><img src="whatsapp.svg" alt="Whatsapp"> <a href="https://wa.me/528117649180" target="_blank">8117649180</a></li>
+        <li><img src="whatsapp.svg" alt="WhatsApp"> <a href="https://wa.me/528117649180" target="_blank">8117649180</a></li>
         <li><img src="instagram.svg" alt="Instagram"> <a href="https://instagram.com/psic.danielreyna" target="_blank">@psic.danielreyna</a></li>
         <li><img src="tiktok.svg" alt="TikTok"> <a href="https://tiktok.com/@psictokdanreyna" target="_blank">@psictokdanreyna</a></li>
-        <li><img src="twitter.svg" alt="X"> @psic.danielreyna</li>
+        <li><img src="twitter.svg" alt="X"> <a href="https://twitter.com/psic.danielreyna" target="_blank">@psic.danielreyna</a></li>
         <li><img src="reloj.svg" alt="Horario"> Lunes a Viernes de 12:00pm a 8:00pm</li>
-        <li><img src="correo.svg" alt="Correo"> psic.danielreyna@gmail.com</li>
       </ul>
     </div>
   </section>
-
-  <script>
-    window.addEventListener('scroll', () => {
-      const navbar = document.getElementById('navbar');
-      if (window.scrollY > 50) {
-        navbar.classList.add('shrink');
-      } else {
-        navbar.classList.remove('shrink');
-      }
-    });
-  </script>
 </body>
-
 </html>
