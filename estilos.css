@@ -53,6 +53,8 @@ nav ul li a {
   align-items: center;
   gap: 40px;
   flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .hero-text {
@@ -98,13 +100,13 @@ nav ul li a {
   background-size: cover;
   background-position: center;
   padding: 100px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .contenedor-terapia {
   background-color: rgba(255, 255, 255, 0.9);
   padding: 50px;
-  max-width: 960px;
-  margin: 0 auto;
   border-radius: 12px;
   text-align: center;
 }
@@ -114,13 +116,13 @@ nav ul li a {
   background-size: cover;
   background-position: center;
   padding: 100px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .contenedor-blog {
   background-color: rgba(255, 255, 255, 0.9);
   padding: 50px;
-  max-width: 960px;
-  margin: 0 auto;
   border-radius: 12px;
   text-align: center;
 }
@@ -130,13 +132,13 @@ nav ul li a {
   background-size: cover;
   background-position: center;
   padding: 100px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .contenedor-contacto {
   background-color: rgba(255, 255, 255, 0.9);
   padding: 50px;
-  max-width: 960px;
-  margin: 0 auto;
   border-radius: 12px;
   text-align: center;
 }
