@@ -5,184 +5,187 @@
   box-sizing: border-box;
 }
 
-/* Tipografía base */
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
   line-height: 1.6;
-  background-color: #fff;
-  color: #222;
-  scroll-behavior: smooth;
+  color: #333;
 }
 
-/* Header fijo */
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: white;
+/* NAVBAR */
+.navbar {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 0.8rem 1.5rem;
-  z-index: 999;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  align-items: center;
+  padding: 10px 30px;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #e0e0e0;
 }
 
-/* Logo */
-.logo-container {
-  flex: 1;
-}
-.logo {
-  height: 40px;
-  width: auto;
-}
-
-/* Menú hamburguesa */
 .menu-icon {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: 25px;
-  height: 20px;
   cursor: pointer;
 }
+
 .menu-icon span {
+  width: 25px;
   height: 3px;
-  background-color: #000;
-  border-radius: 3px;
+  background-color: black;
+  margin: 4px 0;
+  transition: 0.3s;
 }
 
-/* Menú lateral */
-.menu {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+.logo-container {
+  flex: 1;
+  text-align: center;
 }
-.menu ul {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
+
+.logo {
+  height: 40px;
 }
-.menu ul li a {
-  text-decoration: none;
-  color: #000;
-  font-weight: bold;
-}
-.menu ul li a:hover {
-  color: #c58668;
-}
+
 .social-icons {
   display: flex;
-  gap: 1rem;
+  gap: 15px;
 }
+
 .social-icons img {
   height: 20px;
   width: 20px;
 }
 
-/* Hero */
-.hero {
-  background: url('testimonios.png') no-repeat center center/cover;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6rem 2rem 4rem;
+.menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  z-index: 999;
 }
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.menu.show {
+  display: block;
+}
+
+/* Secciones principales */
+.hero, .terapia, .blog, .contacto {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.hero {
+  background-image: url("testimonios.png");
+  flex-direction: row;
+}
+
 .hero-text {
   flex: 1;
-  max-width: 50%;
+  padding: 20px;
 }
+
 .hero-text h1 {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-weight: bold;
+  margin-bottom: 15px;
 }
+
 .hero-text p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
 }
+
+.btn-agendar {
+  background-color: #d9c4b1;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.btn-agendar:hover {
+  background-color: #c4a78e;
+}
+
 .hero-img {
   flex: 1;
   max-width: 40%;
 }
-.hero-img img {
-  width: 100%;
-  object-fit: contain;
+
+.terapia {
+  background-image: url("Sobre mi.png");
 }
 
-/* Botón */
-.btn-agendar {
-  display: inline-block;
-  background-color: #d4bfae;
-  color: white;
-  font-weight: bold;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-.btn-agendar:hover {
-  background-color: #c09f8e;
+.blog {
+  background-image: url("BLOG.png");
 }
 
-/* Secciones generales */
-section {
-  padding: 4rem 1.5rem;
+.contacto {
+  background-image: url("contacto.png");
 }
+
 .seccion-contenido {
-  background: rgba(255, 255, 255, 0.9);
-  padding: 2rem;
-  border-radius: 12px;
   max-width: 1000px;
   margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.92);
+  padding: 40px;
+  border-radius: 10px;
   text-align: center;
 }
+
 .seccion-contenido h2 {
   font-size: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
-/* Fondos por sección */
-.terapia {
-  background: url('Sobre mi.png') no-repeat center center/cover;
-}
-.blog {
-  background: url('BLOG.png') no-repeat center center/cover;
-}
-.contacto {
-  background: url('contacto.png') no-repeat center center/cover;
+.seccion-contenido p {
+  margin-bottom: 15px;
 }
 
-/* Lista de contacto */
 .contacto-lista {
   list-style: none;
   padding: 0;
   text-align: left;
 }
+
 .contacto-lista li {
-  margin: 1rem 0;
   display: flex;
   align-items: center;
-  gap: 0.8rem;
-}
-.contacto-lista img {
-  height: 20px;
-  width: auto;
+  gap: 10px;
+  margin-bottom: 15px;
+  font-size: 1rem;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-  .hero-text, .hero-img {
-    max-width: 100%;
-  }
-  .menu ul {
-    flex-direction: column;
-    gap: 1rem;
-  }
-  .menu {
-    flex-direction: column;
-  }
+.contacto-lista img {
+  height: 20px;
+  width: 20px;
 }
