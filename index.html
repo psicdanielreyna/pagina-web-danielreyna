@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Daniel Reyna | Psicólogo</title>
   <link rel="stylesheet" href="estilos.css" />
 </head>
+
 <body>
-  <header id="main-header">
-    <img src="Logo.png" alt="Daniel Reyna - Psicólogo" class="logo"/>
+  <header id="navbar">
+    <img src="Logo.png" alt="Daniel Reyna - Psicólogo" class="logo" />
     <nav>
       <ul>
         <li><a href="#inicio">Inicio</a></li>
@@ -19,28 +21,27 @@
     </nav>
   </header>
 
-  <section class="hero" id="inicio">
+  <section id="inicio" class="hero">
     <div class="hero-text">
       <h1>Terapia compasiva y práctica desde un enfoque cognitivo conductual.</h1>
       <p>Disponible en línea o presencial en Monterrey, N.L.</p>
-      <a href="#terapia" class="btn-agendar">Agenda una sesión</a>
+      <a class="btn-agendar" href="https://wa.me/528117649180" target="_blank">Agenda una sesión</a>
     </div>
     <div class="hero-img">
-      <img src="daniel.png" alt="Daniel Reyna" style="width: 100%;"/>
+      <img src="daniel.png" alt="Daniel Reyna" style="width: 100%; height: auto" />
     </div>
   </section>
 
-  <section class="terapia" id="terapia">
+  <section id="terapia" class="terapia">
     <div class="contenedor-terapia">
       <h2>Terapia psicológica centrada en ti</h2>
       <p>Mi enfoque está basado en la terapia cognitivo conductual (TCC), donde trabajamos de manera práctica, compasiva y enfocada en resultados. Te acompaño tanto en línea como de forma presencial en Monterrey, adaptándome a tu ritmo, tus necesidades y tus objetivos.</p>
       <p>Este espacio es para ti si estás atravesando ansiedad, relaciones difíciles, baja autoestima o simplemente buscas conocerte más y sanar. En cada sesión encontrarás escucha activa, herramientas útiles y claridad para avanzar.</p>
-      <br/>
-      <a href="https://wa.me/528117649180" target="_blank" class="btn-agendar">Agendar cita</a>
+      <a class="btn-agendar" href="https://wa.me/528117649180" target="_blank">Agendar cita</a>
     </div>
   </section>
 
-  <section class="blog" id="blog">
+  <section id="blog" class="blog">
     <div class="contenedor-blog">
       <h2>Blog</h2>
       <p>Muy pronto aquí podrás leer artículos escritos por mí, enfocados en temas de salud mental, relaciones, emociones y herramientas prácticas para tu bienestar.</p>
@@ -48,29 +49,31 @@
     </div>
   </section>
 
-  <section class="contacto" id="contacto">
+  <section id="contacto" class="contacto">
     <div class="contenedor-contacto">
       <h2>Contacto</h2>
       <ul class="contacto-lista">
-        <li><img src="ubicacion.svg" alt="Ubicación" />Av Simón Bolivar 1333 Col Mitras Centro, Monterrey, N.L.</li>
-        <li><img src="whatsapp.svg" alt="WhatsApp" /><a href="https://wa.me/528117649180" target="_blank">811 764 9180</a></li>
-        <li><img src="instagram.svg" alt="Instagram" /><a href="https://instagram.com/psic.danielreyna" target="_blank">@psic.danielreyna</a></li>
-        <li><img src="tiktok.svg" alt="TikTok" /><a href="https://tiktok.com/@psictokdanreyna" target="_blank">@psictokdanreyna</a></li>
-        <li><img src="twitter.svg" alt="Twitter" /><a href="https://x.com/psic.danielreyna" target="_blank">@psic.danielreyna</a></li>
-        <li><img src="reloj.svg" alt="Horario" />Lunes a viernes de 12:00pm a 8:00pm</li>
+        <li><img src="ubicacion.svg" alt="Ubicación"> Av Simón Bolivar 1333 Col Mitras centro Monterrey Nuevo León</li>
+        <li><img src="whatsapp.svg" alt="Whatsapp"> <a href="https://wa.me/528117649180" target="_blank">8117649180</a></li>
+        <li><img src="instagram.svg" alt="Instagram"> <a href="https://instagram.com/psic.danielreyna" target="_blank">@psic.danielreyna</a></li>
+        <li><img src="tiktok.svg" alt="TikTok"> <a href="https://tiktok.com/@psictokdanreyna" target="_blank">@psictokdanreyna</a></li>
+        <li><img src="twitter.svg" alt="X"> @psic.danielreyna</li>
+        <li><img src="reloj.svg" alt="Horario"> Lunes a Viernes de 12:00pm a 8:00pm</li>
+        <li><img src="correo.svg" alt="Correo"> psic.danielreyna@gmail.com</li>
       </ul>
     </div>
   </section>
 
   <script>
-    const header = document.getElementById('main-header');
     window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
       if (window.scrollY > 50) {
-        header.classList.add('shrink');
+        navbar.classList.add('shrink');
       } else {
-        header.classList.remove('shrink');
+        navbar.classList.remove('shrink');
       }
     });
   </script>
 </body>
+
 </html>
