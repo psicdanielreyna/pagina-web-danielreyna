@@ -5,50 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Daniel Reyna | Psicólogo</title>
   <link rel="stylesheet" href="estilos.css" />
+  <script>
+    window.addEventListener('scroll', function () {
+      const header = document.querySelector('header');
+      header.classList.toggle('shrink', window.scrollY > 10);
+    });
+  </script>
 </head>
 <body>
   <header>
-  <nav>
-    <a href="#inicio"><img src="Logo.png" alt="Logo Daniel Reyna" class="logo"></a>
-    <ul>
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#terapia">Terapia</a></li>
-      <li><a href="#blog">Blog</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-  </nav>
-</header>
+    <a href="#inicio">
+      <img src="Logo.png" alt="Daniel Reyna - Psicólogo" class="logo" />
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#terapia">Terapia</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<section id="inicio" class="hero">
-  <div class="hero-text">
-    <h1>Terapia compasiva y práctica desde un enfoque cognitivo conductual.</h1>
-    <p>Disponible en línea o presencial en Monterrey, N.L.</p>
-    <a href="#terapia" class="btn-agendar">Agenda una sesión</a>
-  </div>
-  <img src="daniel.png" alt="Daniel Reyna Psicólogo" class="hero-img" />
-</section>
+  <section id="inicio" class="hero">
+    <div class="hero-text">
+      <h1>Terapia compasiva y práctica desde un enfoque cognitivo conductual.</h1>
+      <p>Disponible en línea o presencial en Monterrey, N.L.</p>
+      <a href="https://wa.me/528117649180" class="btn-agendar" target="_blank">Agenda una sesión</a>
+    </div>
+    <img src="daniel.png" alt="Daniel Reyna Psicólogo" class="hero-img" />
+  </section>
 
-<section id="terapia" class="terapia">
-  <div class="contenedor-terapia">
-    <h2>Terapia psicológica centrada en ti</h2>
-    <p>
-      Mi enfoque está basado en la terapia cognitivo conductual (TCC), donde trabajamos
-      de manera práctica, compasiva y enfocada en resultados. Te acompaño tanto en línea
-      como de forma presencial en Monterrey, adaptándome a tu ritmo, tus necesidades y tus objetivos.
-    </p>
-    <p>
-      Este espacio es para ti si estás atravesando ansiedad, relaciones difíciles, baja autoestima
-      o simplemente buscas conocerte más y sanar. En cada sesión encontrarás escucha activa,
-      herramientas útiles y claridad para avanzar.
-    </p>
-    <a href="https://wa.me/528117649180" target="_blank" class="btn-agendar">Agendar cita</a>
-  </div>
-</section>
+  <section id="terapia" class="terapia">
+    <div class="contenedor-terapia">
+      <h2>Terapia psicológica centrada en ti</h2>
+      <p>
+        Mi enfoque está basado en la terapia cognitivo conductual (TCC), donde trabajamos de manera práctica,
+        compasiva y enfocada en resultados. Te acompaño tanto en línea como de forma presencial en Monterrey,
+        adaptándome a tu ritmo, tus necesidades y tus objetivos.
+      </p>
+      <p>
+        Este espacio es para ti si estás atravesando ansiedad, relaciones difíciles, baja autoestima o simplemente buscas
+        conocerte más y sanar. En cada sesión encontrarás escucha activa, herramientas útiles y claridad para avanzar.
+      </p>
+      <a href="https://wa.me/528117649180" class="btn-agendar" target="_blank">Agendar cita</a>
+    </div>
+  </section>
 
-<section id="blog" class="blog">
-  <div class="contenedor-blog">
-    <h2>Blog</h2>
-    <p>Muy pronto aquí podrás leer artículos escritos por mí, enfocados en temas de salud mental, relaciones, emociones y herramientas prácticas para tu bienestar.</p>
-    <p>Estamos trabajando en integrar un sistema de blog que te permitirá navegar cómodamente por cada entrada. ¡Espéralo pronto!</p>
-  </div>
-</section>
+  <section id="blog" class="blog">
+    <div class="contenedor-blog">
+      <h2>Blog</h2>
+      <p>
+        Muy pronto aquí podrás leer artículos escritos por mí, enfocados en temas de salud mental, relaciones, emociones y
+        herramientas prácticas para tu bienestar.
+      </p>
+      <p>
+        Estamos trabajando en integrar un sistema de blog que te permitirá navegar cómodamente por cada entrada.
+        ¡Espéralo pronto!
+      </p>
+    </div>
+  </section>
+</body>
+</html>
