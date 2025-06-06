@@ -53,8 +53,6 @@ nav ul li a {
   align-items: center;
   gap: 40px;
   flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .hero-text {
@@ -95,52 +93,35 @@ nav ul li a {
   background-color: #bda490;
 }
 
-.terapia {
-  background-image: url('Sobre mi.png');
+.terapia,
+.blog,
+.contacto {
   background-size: cover;
   background-position: center;
   padding: 100px 40px;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
-.contenedor-terapia {
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 50px;
-  border-radius: 12px;
-  text-align: center;
+.terapia {
+  background-image: url('Sobre mi.png');
 }
 
 .blog {
   background-image: url('BLOG.png');
-  background-size: cover;
-  background-position: center;
-  padding: 100px 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.contenedor-blog {
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 50px;
-  border-radius: 12px;
-  text-align: center;
 }
 
 .contacto {
   background-image: url('contacto.png');
-  background-size: cover;
-  background-position: center;
-  padding: 100px 40px;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
+.contenedor-terapia,
+.contenedor-blog,
 .contenedor-contacto {
   background-color: rgba(255, 255, 255, 0.9);
   padding: 50px;
   border-radius: 12px;
   text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .contacto-lista {
