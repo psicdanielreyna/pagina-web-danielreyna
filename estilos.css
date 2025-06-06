@@ -1,4 +1,3 @@
-/* Encabezado y navegación */
 header {
   background-color: white;
   padding: 1rem 2rem;
@@ -8,6 +7,11 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+header.shrink {
+  padding: 0.5rem 2rem;
 }
 
 nav {
@@ -18,12 +22,17 @@ nav {
 }
 
 .logo {
-  height: auto;
+  height: 50px;
+  width: auto;
   max-width: 250px;
-  width: 100%;
+  transition: all 0.3s ease;
 }
 
-/* Menú */
+header.shrink .logo {
+  height: 35px;
+  max-width: 180px;
+}
+
 nav ul {
   list-style: none;
   display: flex;
@@ -38,14 +47,13 @@ nav ul li a {
   color: black;
 }
 
-/* Sección Hero (inicio) */
 .hero {
   background: url('testimonios.png') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 4rem 10%;
-  min-height: 90vh;
+  min-height: 100vh;
   flex-wrap: wrap;
 }
 
@@ -72,7 +80,6 @@ nav ul li a {
   object-fit: contain;
 }
 
-/* Botón */
 .btn-agendar {
   background-color: #d6c7bd;
   color: white;
@@ -89,36 +96,46 @@ nav ul li a {
   background-color: #c4b2a8;
 }
 
-/* Sección Terapia */
 .terapia {
   background: url('Sobre%20mi.png') center/cover no-repeat;
-  padding: 5rem 10%;
+  padding: 8rem 10%;
   display: flex;
   justify-content: center;
+  min-height: 100vh;
 }
 
 .contenedor-terapia {
   background-color: rgba(255, 255, 255, 0.9);
   padding: 3rem;
   border-radius: 10px;
-  max-width: 1000px;
+  max-width: 1200px;
   width: 100%;
   text-align: center;
 }
 
-/* Sección Blog */
 .blog {
   background: url('BLOG.png') center/cover no-repeat;
-  padding: 5rem 10%;
+  padding: 8rem 10%;
   display: flex;
   justify-content: center;
+  min-height: 100vh;
 }
 
 .contenedor-blog {
   background-color: rgba(255, 255, 255, 0.9);
   padding: 3rem;
   border-radius: 10px;
-  max-width: 1000px;
+  max-width: 1200px;
   width: 100%;
   text-align: center;
 }
+
+/* JavaScript de scroll */
+window.addEventListener('scroll', function () {
+  const header = document.querySelector('header');
+  if (window.scrollY > 50) {
+    header.classList.add('shrink');
+  } else {
+    header.classList.remove('shrink');
+  }
+});
