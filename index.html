@@ -1,29 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Daniel Reyna | Psicólogo</title>
-  <link rel="stylesheet" href="estilos.css">
-  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="estilos.css" />
+  <script defer>
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuIcon = document.querySelector(".menu-icon");
+      const menu = document.querySelector(".menu");
+
+      menuIcon.addEventListener("click", () => {
+        menu.classList.toggle("show");
+        menuIcon.classList.toggle("open");
+      });
+    });
+  </script>
 </head>
 <body>
   <header class="navbar">
-    <div class="menu-icon" id="menu-toggle">
+    <div class="menu-icon">
       <span></span>
       <span></span>
       <span></span>
     </div>
+
     <div class="logo-container">
-      <a href="#inicio"><img src="Logo.png" alt="Daniel Reyna Logo" class="logo"></a>
+      <img src="Logo.png" alt="Logo Daniel Reyna" class="logo" />
     </div>
+
     <div class="social-icons">
-      <a href="https://instagram.com/psic.danielreyna" target="_blank"><img src="Instagram navegacion.svg" alt="Instagram"></a>
-      <a href="https://tiktok.com/@psictokdanreyna" target="_blank"><img src="Tiktok navegacion.svg" alt="TikTok"></a>
-      <a href="https://twitter.com/psic.danielreyna" target="_blank"><img src="twitter.svg" alt="X"></a>
-      <a href="https://youtube.com" target="_blank"><img src="Youtube navegacion.svg" alt="YouTube"></a>
+      <a href="https://instagram.com/psic.danielreyna" target="_blank">
+        <img src="Instagram navegacion.svg" alt="Instagram" />
+      </a>
+      <a href="https://tiktok.com/@psictokdanreyna" target="_blank">
+        <img src="Tiktok navegacion.svg" alt="Tiktok" />
+      </a>
+      <a href="https://x.com/psic.danielreyna" target="_blank">
+        <img src="twitter.svg" alt="X/Twitter" />
+      </a>
+      <a href="https://youtube.com" target="_blank">
+        <img src="Youtube navegacion.svg" alt="YouTube" />
+      </a>
     </div>
-    <nav class="menu" id="menu">
+
+    <nav class="menu">
       <ul>
         <li><a href="#terapia">Terapia</a></li>
         <li><a href="#blog">Blog</a></li>
@@ -38,9 +59,7 @@
       <p>Disponible en línea o presencial en Monterrey, N.L.</p>
       <a href="https://wa.me/528117649180" class="btn-agendar" target="_blank">Agenda una sesión</a>
     </div>
-    <div class="hero-img">
-      <img src="IMG_0265.jpeg" alt="Daniel Reyna Foto" style="width: 100%; height: auto;">
-    </div>
+    <img src="Daniel Reyna Foto.png" alt="Daniel Reyna" class="hero-img" />
   </section>
 
   <section class="terapia" id="terapia">
@@ -64,12 +83,12 @@
     <div class="seccion-contenido">
       <h2>Contacto</h2>
       <ul class="contacto-lista">
-        <li><img src="ubicacion.svg" alt="Ubicación"> Av Simón Bolivar 1333 Col Mitras centro Monterrey Nuevo León</li>
-        <li><img src="whatsapp.svg" alt="WhatsApp"> <a href="https://wa.me/528117649180" target="_blank">8117649180</a></li>
-        <li><img src="instagram.svg" alt="Instagram"> <a href="https://instagram.com/psic.danielreyna" target="_blank">@psic.danielreyna</a></li>
-        <li><img src="tiktok.svg" alt="TikTok"> <a href="https://tiktok.com/@psictokdanreyna" target="_blank">@psictokdanreyna</a></li>
-        <li><img src="twitter.svg" alt="X"> <a href="https://twitter.com/psic.danielreyna" target="_blank">@psic.danielreyna</a></li>
-        <li><img src="reloj.svg" alt="Horario"> Lunes a Viernes de 12:00pm a 8:00pm</li>
+        <li><img src="ubicacion.svg" alt="Ubicación" />Av Simón Bolivar 1333, Col Mitras Centro, Monterrey, Nuevo León</li>
+        <li><img src="whatsapp.svg" alt="Whatsapp" />811 764 9180</li>
+        <li><img src="instagram.svg" alt="Instagram" />instagram.com/psic.danielreyna</li>
+        <li><img src="tiktok.svg" alt="Tiktok" />tiktok.com/@psictokdanreyna</li>
+        <li><img src="twitter.svg" alt="X" />X: psic.danielreyna</li>
+        <li><img src="reloj.svg" alt="Horario" />Lunes a Viernes de 12:00pm a 8:00pm</li>
       </ul>
     </div>
   </section>
