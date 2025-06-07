@@ -27,17 +27,17 @@ header.navbar {
 .logo-container {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
   top: 50%;
   transform: translate(-50%, -50%);
 }
 
-  flex: 1;
+.logo {
+  height: auto;
+  max-height: 50px;
+  width: auto;
+  max-width: 200px;
 }
 
-.logo {
-  max-height: 35px;
-}
 
 .menu-icon {
   display: flex;
