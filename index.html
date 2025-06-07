@@ -14,6 +14,17 @@
         menu.classList.toggle("show");
         menuIcon.classList.toggle("open");
       });
+
+      // Scroll reveal
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      });
+
+      document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
     });
   </script>
 </head>
@@ -53,7 +64,7 @@
     </nav>
   </header>
 
-  <section class="hero fade-up" id="inicio">
+  <section class="hero" id="inicio">
     <div class="hero-text">
       <h1>Terapia compasiva y práctica desde un enfoque cognitivo conductual.</h1>
       <p>Disponible en línea o presencial en Monterrey, N.L.</p>
@@ -62,7 +73,7 @@
     <img src="daniel.png" alt="Daniel Reyna" class="hero-img" />
   </section>
 
-  <section class="terapia fade-up" id="terapia">
+  <section class="terapia scroll-reveal" id="terapia">
     <div class="seccion-contenido">
       <h2>Terapia psicológica centrada en ti</h2>
       <p>Mi enfoque está basado en la terapia cognitivo conductual (TCC), donde trabajamos de manera práctica, compasiva y enfocada en resultados. Te acompaño tanto en línea como de forma presencial en Monterrey, adaptándome a tu ritmo, tus necesidades y tus objetivos.</p>
@@ -71,7 +82,7 @@
     </div>
   </section>
 
-  <section class="blog fade-up" id="blog">
+  <section class="blog scroll-reveal" id="blog">
     <div class="seccion-contenido">
       <h2>Blog</h2>
       <p>Muy pronto aquí podrás leer artículos escritos por mí, enfocados en temas de salud mental, relaciones, emociones y herramientas prácticas para tu bienestar.</p>
@@ -79,7 +90,7 @@
     </div>
   </section>
 
-  <section class="contacto fade-up" id="contacto">
+  <section class="contacto scroll-reveal" id="contacto">
     <div class="seccion-contenido">
       <h2>Contacto</h2>
       <ul class="contacto-lista">
