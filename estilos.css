@@ -47,11 +47,18 @@ body {
   flex: 1;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
+
 .logo {
-  max-height: 40px;
-  width: auto;
+  height: 40px;
+  max-width: 200px;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+}
+
 }
 
 /* Redes sociales */
