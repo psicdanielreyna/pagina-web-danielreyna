@@ -252,7 +252,18 @@ section {
     opacity: 1;
     transform: translateY(0);
   }
+/* Animaciones al hacer scroll */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
 }
+
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
 
 .fade-up {
   animation: fadeUp 1s ease forwards;
